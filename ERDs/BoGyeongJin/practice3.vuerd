@@ -646,29 +646,6 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 72.9794921875,
-              "widthComment": 71.5703125,
-              "widthDataType": 89.29296875,
-              "widthDefault": 60
-            },
-            "id": "e1197c2a-cc4a-4996-8cbd-3811400324b1"
-          },
-          {
-            "name": "ANSWER_ID",
-            "comment": "응답 대표값",
-            "dataType": "VARCHAR(200)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
               "fk": true,
               "pfk": false,
               "widthName": 72.9794921875,
@@ -706,7 +683,7 @@
           "active": false,
           "left": 600.8334,
           "top": 328.3335,
-          "zIndex": 103,
+          "zIndex": 123,
           "widthName": 60,
           "widthComment": 60
         },
@@ -792,7 +769,7 @@
             "b548081c-41e8-4569-8345-861fd64aec05"
           ],
           "x": 600.8334,
-          "y": 414.0835,
+          "y": 403.8335,
           "direction": "left"
         },
         "constraintName": "fk_users_to_survey",
@@ -818,7 +795,7 @@
             "df055225-ce7c-402d-9590-0e4d90afd4d5"
           ],
           "x": 820.903956640625,
-          "y": 499.8335,
+          "y": 479.3335,
           "direction": "bottom"
         },
         "constraintName": "fk_질문들_to_survey",
@@ -846,7 +823,7 @@
             "e8e820f3-6149-4616-9bab-babed8d1642c"
           ],
           "x": 1040.97451328125,
-          "y": 414.0835,
+          "y": 403.8335,
           "direction": "right"
         },
         "constraintName": "fk_answers_to_survey",
