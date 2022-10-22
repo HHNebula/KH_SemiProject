@@ -220,8 +220,8 @@
         "id": "6b778ce6-3d32-4d02-ad33-f7058fe38a40"
       },
       {
-        "name": "권한들",
-        "comment": "",
+        "name": "AUTHS",
+        "comment": "권한들",
         "columns": [
           {
             "name": "AUTH_ID",
@@ -274,7 +274,7 @@
           "active": false,
           "left": 100.0013,
           "top": 430.0005,
-          "zIndex": 1,
+          "zIndex": 68,
           "widthName": 60,
           "widthComment": 60
         },
@@ -413,8 +413,8 @@
         "id": "dfb5de11-9d2b-4f04-b9c9-7fefe9eaaebb"
       },
       {
-        "name": "질문들",
-        "comment": "",
+        "name": "QUESTIONS",
+        "comment": "질문들",
         "columns": [
           {
             "name": "QUESTIONS_ID",
@@ -467,8 +467,8 @@
           "active": true,
           "left": 601.6666,
           "top": 589.1657,
-          "zIndex": 26,
-          "widthName": 60,
+          "zIndex": 75,
+          "widthName": 72.47802734375,
           "widthComment": 60
         },
         "visible": true,
