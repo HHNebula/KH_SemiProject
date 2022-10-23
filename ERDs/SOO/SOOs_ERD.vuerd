@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -627,
-    "scrollLeft": -28,
-    "zoomLevel": 0.6,
+    "scrollTop": -103,
+    "scrollLeft": -198,
+    "zoomLevel": 1,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -166,7 +166,7 @@
           "active": false,
           "left": 135,
           "top": 371,
-          "zIndex": 316,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
@@ -228,7 +228,7 @@
           "active": false,
           "left": 30,
           "top": 159,
-          "zIndex": 110,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -330,259 +330,18 @@
               "widthDefault": 60
             },
             "id": "581eb155-b9e4-4ef7-a3ff-5bc237208172"
-          },
-          {
-            "name": "ROOM_ID",
-            "comment": "방번호",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60.18896484375,
-              "widthComment": 60,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "a347287f-d68b-4741-a53e-8f31f99d5388"
           }
         ],
         "ui": {
           "active": false,
           "left": 36.6665,
           "top": 658.7496,
-          "zIndex": 318,
+          "zIndex": 3,
           "widthName": 90.86083984375,
           "widthComment": 71.5703125
         },
         "visible": true,
         "id": "82ca16cb-c2e8-4630-bc85-d26683af2238"
-      },
-      {
-        "name": "ROOMS",
-        "comment": "방들",
-        "columns": [
-          {
-            "name": "ROOM_ID",
-            "comment": "방번호",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60.18896484375,
-              "widthComment": 60,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "8c7c5cb7-fe59-46c3-99ff-20d132af0ca5"
-          },
-          {
-            "name": "ROOM_TYPE_ID",
-            "comment": "방타입아이디",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 94.32666015625,
-              "widthComment": 80,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "33675b11-d487-45e3-a941-55aa87954ce3"
-          },
-          {
-            "name": "ROOM_NO",
-            "comment": "방 호수",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 67.35546875,
-              "widthComment": 60,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "2aebff1b-233c-4679-990a-2c45d57ba5a1"
-          },
-          {
-            "name": "PRICE",
-            "comment": "1박 숙박비",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 65.73046875,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "42b1976d-f788-47d6-b4c0-cee4fd23fd90"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 395.3333,
-          "top": 907.9996,
-          "zIndex": 492,
-          "widthName": 60,
-          "widthComment": 60,
-          "color": "#F44336"
-        },
-        "visible": true,
-        "id": "df2807d5-90ba-4831-9d4c-4f7c3c855b2a"
-      },
-      {
-        "name": "ROOM_TYPES",
-        "comment": "방 타입들",
-        "columns": [
-          {
-            "name": "ROOM_TYPE_ID",
-            "comment": "방타입아이디",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 94.32666015625,
-              "widthComment": 80,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "deb9187e-72cd-426d-91f4-f0df0f4470a4"
-          },
-          {
-            "name": "ROOM_TYPE",
-            "comment": "방타입",
-            "dataType": "VARCHAR(255)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 75.95654296875,
-              "widthComment": 60,
-              "widthDataType": 89.29296875,
-              "widthDefault": 60
-            },
-            "id": "b0c267d8-e026-4ee2-82c5-da8d0bf9297e"
-          },
-          {
-            "name": "BASE",
-            "comment": "기준인원",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "7e2d4b5f-5e58-4cdc-82c7-f9d1307323a0"
-          },
-          {
-            "name": "MAX",
-            "comment": "최대인원",
-            "dataType": "INTEGER(20)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "6abe7fca-5213-4be1-8e7d-0bef9da3c9ba"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 42,
-          "top": 1134,
-          "zIndex": 285,
-          "widthName": 83.01513671875,
-          "widthComment": 60,
-          "color": "#F44336"
-        },
-        "visible": true,
-        "id": "cbbf1549-a315-4967-b748-151f5fe03149"
       },
       {
         "name": "USER_RESERV_QA",
@@ -635,7 +394,7 @@
             "id": "7985354d-5821-4272-abc1-1d5cc5a754d1"
           },
           {
-            "name": "Q_ID",
+            "name": "QUESTION_ID",
             "comment": "질문 아이디",
             "dataType": "INTEGER(10)",
             "default": "",
@@ -650,19 +409,42 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 83.78955078125,
               "widthComment": 71.5703125,
               "widthDataType": 75.13134765625,
               "widthDefault": 60
             },
             "id": "b4e25f64-b04c-4cfb-a8fd-4b7e7fefbc8d"
+          },
+          {
+            "name": "ANSWER",
+            "comment": "응답",
+            "dataType": "VARCHAR(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "d59cdca2-093f-4046-b87e-7127edce88a7"
           }
         ],
         "ui": {
           "active": false,
           "left": 709.7774,
           "top": 531.1107,
-          "zIndex": 494,
+          "zIndex": 9,
           "widthName": 106.94580078125,
           "widthComment": 120
         },
@@ -674,7 +456,7 @@
         "comment": "질문들",
         "columns": [
           {
-            "name": "Q_ID",
+            "name": "QUESTION_ID",
             "comment": "질문 아이디",
             "dataType": "INTEGER(10)",
             "default": "",
@@ -689,35 +471,12 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 83.78955078125,
               "widthComment": 71.5703125,
               "widthDataType": 75.13134765625,
               "widthDefault": 60
             },
             "id": "4bd376b6-b936-437a-9c4f-dbeac4a2987f"
-          },
-          {
-            "name": "TYPE_ID",
-            "comment": "질문 타입 아이디",
-            "dataType": "INTEGER(10)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 102.140625,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "230f42f7-272f-4325-b437-69e927f7baf4"
           },
           {
             "name": "Question",
@@ -747,74 +506,12 @@
           "active": false,
           "left": 712,
           "top": 248,
-          "zIndex": 394,
+          "zIndex": 5,
           "widthName": 72.47802734375,
           "widthComment": 60
         },
         "visible": true,
         "id": "fe9fa113-4549-4fdb-b80d-846a9672e905"
-      },
-      {
-        "name": "TYPES",
-        "comment": "질문 타입들",
-        "columns": [
-          {
-            "name": "TYPE_ID",
-            "comment": "질문 타입 아이디",
-            "dataType": "INTEGER(10)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 102.140625,
-              "widthDataType": 75.13134765625,
-              "widthDefault": 60
-            },
-            "id": "7d811507-0572-46bb-8b07-24481e7a8ba0"
-          },
-          {
-            "name": "TYPE",
-            "comment": "질문 타입",
-            "dataType": "VARCHAR(255)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 89.29296875,
-              "widthDefault": 60
-            },
-            "id": "2fa16a8b-4bdb-4d69-b129-7b6260214200"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 1257.222,
-          "top": 65.3334,
-          "zIndex": 472,
-          "widthName": 60,
-          "widthComment": 71.5703125
-        },
-        "visible": true,
-        "id": "05104819-b824-4094-8444-6b60925f4033"
       }
     ],
     "indexes": []
@@ -822,40 +519,16 @@
   "memo": {
     "memos": [
       {
-        "value": "1\t1\t접근성\t\n2\t1\t친절도\t\n3\t1\t청결도\t\n4\t1\t식당 만족도\t\n5\t1\t시설 만족도\t\n6\t2\t기타",
+        "value": "1   접근성\t\n2   친절도\t\n3   청결도\t\n4   식당 만족도\t\n5   부대시설 만족도\t\n6   기타 하고싶은 말",
         "ui": {
           "active": false,
-          "left": 744.4444444444454,
-          "top": 40.88888888888956,
-          "zIndex": 454,
+          "left": 716.666666666668,
+          "top": 46.444444444445125,
+          "zIndex": 4,
           "width": 330,
           "height": 146
         },
         "id": "86a18a57-4ac4-4b0d-ba75-10f37d2e166d"
-      },
-      {
-        "value": "1\t만족도 평가형\n2\t서술형",
-        "ui": {
-          "active": false,
-          "left": 1259.4444444444455,
-          "top": 179.9999999999997,
-          "zIndex": 474,
-          "width": 127,
-          "height": 100
-        },
-        "id": "82dd719f-fa12-4bee-b301-9882e1549bea"
-      },
-      {
-        "value": "안쓰는 테이블",
-        "ui": {
-          "active": false,
-          "left": 98,
-          "top": 912,
-          "zIndex": 478,
-          "width": 127,
-          "height": 100
-        },
-        "id": "7bee66ea-f233-4c7a-90e1-a4e6bb82542a"
       }
     ]
   },
@@ -918,58 +591,6 @@
         "relationshipType": "OneN",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "cbbf1549-a315-4967-b748-151f5fe03149",
-          "columnIds": [
-            "deb9187e-72cd-426d-91f4-f0df0f4470a4"
-          ],
-          "x": 472.61962890625,
-          "y": 1209.5,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "df2807d5-90ba-4831-9d4c-4f7c3c855b2a",
-          "columnIds": [
-            "33675b11-d487-45e3-a941-55aa87954ce3"
-          ],
-          "x": 603.56230390625,
-          "y": 1058.9996,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_room_types_to_rooms",
-        "visible": true,
-        "id": "8cdd4bd5-15f1-4b4d-889c-9a77fcd9b2f2"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "df2807d5-90ba-4831-9d4c-4f7c3c855b2a",
-          "columnIds": [
-            "8c7c5cb7-fe59-46c3-99ff-20d132af0ca5"
-          ],
-          "x": 395.3333,
-          "y": 983.4996,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "82ca16cb-c2e8-4630-bc85-d26683af2238",
-          "columnIds": [
-            "a347287f-d68b-4741-a53e-8f31f99d5388"
-          ],
-          "x": 252.29369726562498,
-          "y": 830.2496,
-          "direction": "bottom"
-        },
-        "constraintName": "fk_rooms_to_reservations",
-        "visible": true,
-        "id": "250b708f-04ce-4456-b24b-15df209cd779"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "d360b5fd-f8bb-448b-bfe7-2de20c31b685",
           "columnIds": [
             "c0a131f1-4c95-415e-a1d0-09489546dd3f"
@@ -984,7 +605,7 @@
             "7ae3efa2-571f-41b3-bdef-9282e257bf02"
           ],
           "x": 709.7774,
-          "y": 563.7357,
+          "y": 568.8607,
           "direction": "left"
         },
         "constraintName": "fk_users_to_user_reserv_qa",
@@ -1001,7 +622,7 @@
             "fa7fe9fa-c78b-46c8-bf77-a7c55c73d045"
           ],
           "x": 467.92089453125,
-          "y": 744.4996,
+          "y": 734.2496,
           "direction": "right"
         },
         "end": {
@@ -1010,7 +631,7 @@
             "7985354d-5821-4272-abc1-1d5cc5a754d1"
           ],
           "x": 709.7774,
-          "y": 628.9857,
+          "y": 644.3607,
           "direction": "left"
         },
         "constraintName": "fk_reservations_to_user_reserv_qa",
@@ -1026,8 +647,8 @@
           "columnIds": [
             "4bd376b6-b936-437a-9c4f-dbeac4a2987f"
           ],
-          "x": 921.216796875,
-          "y": 378.5,
+          "x": 917.826416015625,
+          "y": 358,
           "direction": "bottom"
         },
         "end": {
@@ -1035,39 +656,13 @@
           "columnIds": [
             "b4e25f64-b04c-4cfb-a8fd-4b7e7fefbc8d"
           ],
-          "x": 920.90093515625,
+          "x": 937.388972265625,
           "y": 531.1107,
           "direction": "top"
         },
         "constraintName": "fk_questions_to_user_reserv_qa",
         "visible": true,
         "id": "3ffc6bf0-a0df-4671-bc65-131f100a5abe"
-      },
-      {
-        "identification": false,
-        "relationshipType": "OneN",
-        "startRelationshipType": "Dash",
-        "start": {
-          "tableId": "05104819-b824-4094-8444-6b60925f4033",
-          "columnIds": [
-            "7d811507-0572-46bb-8b07-24481e7a8ba0"
-          ],
-          "x": 1257.222,
-          "y": 120.3334,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "fe9fa113-4549-4fdb-b80d-846a9672e905",
-          "columnIds": [
-            "230f42f7-272f-4325-b437-69e927f7baf4"
-          ],
-          "x": 1130.43359375,
-          "y": 313.25,
-          "direction": "right"
-        },
-        "constraintName": "fk_types_to_questions",
-        "visible": true,
-        "id": "186c7f78-4ea7-4a1a-a923-82b42318b27e"
       }
     ]
   }
