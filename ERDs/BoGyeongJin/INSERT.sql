@@ -61,6 +61,12 @@ SELECT *
 FROM reservations
 ;
 
+-- 체크인 날짜 확인
+SELECT CHECK_IN
+FROM reservations
+WHERE CHECK_IN = '2022-10-22'
+;
+
 -- 질문 테이블 값 입력
 INSERT INTO questions(QUESTION_ID, QUESTION)
 VALUE ('Q1', '호텔을 찾아오시는 길은 편리하셨습니까?')
