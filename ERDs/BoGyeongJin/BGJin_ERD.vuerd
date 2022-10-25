@@ -166,7 +166,7 @@
           "active": false,
           "left": 96.6652,
           "top": 98.3349,
-          "zIndex": 4,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -228,7 +228,7 @@
           "active": false,
           "left": 68.3352,
           "top": 392.501,
-          "zIndex": 114,
+          "zIndex": 17,
           "widthName": 60,
           "widthComment": 60
         },
@@ -336,7 +336,7 @@
           "active": false,
           "left": 614.1713,
           "top": 27.5033,
-          "zIndex": 108,
+          "zIndex": 2,
           "widthName": 90.86083984375,
           "widthComment": 60
         },
@@ -347,29 +347,6 @@
         "name": "QUESTIONS",
         "comment": "질문들",
         "columns": [
-          {
-            "name": "QUESTION",
-            "comment": "질문",
-            "dataType": "VARCHAR(200)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 65.41943359375,
-              "widthComment": 60,
-              "widthDataType": 89.29296875,
-              "widthDefault": 60
-            },
-            "id": "14b657b7-0313-4598-8728-367228ff8717"
-          },
           {
             "name": "QUESTION_ID",
             "comment": "질문 대표값",
@@ -392,13 +369,36 @@
               "widthDefault": 60
             },
             "id": "4de5f36a-43a3-48d4-b0eb-be5dfb0039ef"
+          },
+          {
+            "name": "QUESTION",
+            "comment": "질문",
+            "dataType": "VARCHAR(200)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65.41943359375,
+              "widthComment": 60,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "14b657b7-0313-4598-8728-367228ff8717"
           }
         ],
         "ui": {
           "active": false,
           "left": 325.8343,
           "top": 578.3352,
-          "zIndex": 111,
+          "zIndex": 9,
           "widthName": 72.47802734375,
           "widthComment": 60
         },
@@ -483,7 +483,7 @@
           "active": false,
           "left": 587.5031,
           "top": 291.6682,
-          "zIndex": 113,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -494,29 +494,6 @@
         "name": "ANSWERS",
         "comment": "설문답항",
         "columns": [
-          {
-            "name": "ANSWER",
-            "comment": "답항",
-            "dataType": "INTEGER",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "fe79dbd6-abc2-4989-a88d-7ce98baadaf8"
-          },
           {
             "name": "ANSWER_ID",
             "comment": "답항 대표값",
@@ -539,13 +516,36 @@
               "widthDefault": 60
             },
             "id": "d52dfaca-3d61-4a6b-82b7-3a83ac380bf2"
+          },
+          {
+            "name": "ANSWER",
+            "comment": "답항",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fe79dbd6-abc2-4989-a88d-7ce98baadaf8"
           }
         ],
         "ui": {
           "active": false,
           "left": 1100.0009,
           "top": 235.8341,
-          "zIndex": 109,
+          "zIndex": 10,
           "widthName": 61.66796875,
           "widthComment": 60
         },
@@ -605,9 +605,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 947.5013,
-          "top": 545.8339,
-          "zIndex": 112,
+          "left": 1027.5013,
+          "top": 546.8339,
+          "zIndex": 16,
           "widthName": 60,
           "widthComment": 60
         },
@@ -710,7 +710,7 @@
             "4de5f36a-43a3-48d4-b0eb-be5dfb0039ef"
           ],
           "x": 737.48713203125,
-          "y": 605.8352,
+          "y": 660.8352,
           "direction": "right"
         },
         "end": {
@@ -718,8 +718,8 @@
           "columnIds": [
             "860a367e-bd57-4b93-9a19-e031a59b1371"
           ],
-          "x": 947.5013,
-          "y": 600.8339,
+          "x": 1027.5013,
+          "y": 601.8339,
           "direction": "left"
         },
         "constraintName": "fk_questions_to_",
@@ -736,7 +736,7 @@
             "4de5f36a-43a3-48d4-b0eb-be5dfb0039ef"
           ],
           "x": 737.48713203125,
-          "y": 660.8352,
+          "y": 605.8352,
           "direction": "right"
         },
         "end": {
@@ -770,8 +770,8 @@
           "columnIds": [
             "468e4862-2286-4974-b108-18138eff5728"
           ],
-          "x": 1153.327716015625,
-          "y": 545.8339,
+          "x": 1233.327716015625,
+          "y": 546.8339,
           "direction": "top"
         },
         "constraintName": "fk_answers_to_",
