@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -303.47221016332264,
-    "scrollLeft": -514.9999795357402,
-    "zoomLevel": 0.8,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -392,36 +392,13 @@
               "widthDefault": 60
             },
             "id": "875c195b-5909-430b-8ef4-faccc5616a25"
-          },
-          {
-            "name": "QUESTION_LIST",
-            "comment": "문항",
-            "dataType": "VARCHAR",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 94.701171875,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "b6a672d8-6985-433f-9fe6-2d628ef6e2b2"
           }
         ],
         "ui": {
           "active": false,
           "left": 1056.4227,
           "top": 141.1186,
-          "zIndex": 172,
+          "zIndex": 186,
           "widthName": 72.47802734375,
           "widthComment": 60
         },
@@ -519,12 +496,12 @@
   "memo": {
     "memos": [
       {
-        "value": "문제 답변\n\n사용자의 INPUT 값을\n\n문항 별 답변을 \nGROUP BY 후\nCOUNT 해서 통계 예정\n",
+        "value": "문제 답변----->\n\n사용자의 INPUT 값을\n\n문항 별 답변을 \nGROUP BY 후\nCOUNT 해서 통계 예정\n",
         "ui": {
           "active": false,
-          "left": 1295.5676999555715,
-          "top": 347.4999901652352,
-          "zIndex": 185,
+          "left": 283.29095446554925,
+          "top": 658.3878746370575,
+          "zIndex": 205,
           "width": 193.66666401757152,
           "height": 227.77777270034534
         },
@@ -543,16 +520,28 @@
         "id": "eea9577d-d78a-4e65-97f0-9d6985fe5927"
       },
       {
-        "value": "문제 통계 (CASE WHEN사용)\nCASE WHEN QUESTIONS.KIND_QUESTION\nANSWER = 1\nTHEN \"매우불만\"\n\nCASE WHEN ANSWER = 2\n        THEN \"불만\"\n\nCASE WHEN ANSWER = 3\n        THEN \"만족\"\n\nCASE WHEN ANSWER = 3\n        THEN \"매우만족\"",
+        "value": "문제 통계 (CASE WHEN사용)\nCASE WHEN \nANSWER = 1\nTHEN \"매우불만\"\n\nCASE WHEN ANSWER = 2\n        THEN \"불만\"\n\nCASE WHEN ANSWER = 3\n        THEN \"만족\"\n\nCASE WHEN ANSWER = 3\n        THEN \"매우만족\"",
         "ui": {
           "active": false,
-          "left": 1068.6232645290863,
-          "top": 335.55554619542085,
-          "zIndex": 184,
+          "left": 1067.755209008024,
+          "top": 451.00693049668394,
+          "zIndex": 211,
           "width": 191.44444188365256,
           "height": 289.44443691659893
         },
         "id": "04f4dd0e-4b8e-4d24-a642-3354edb316f7"
+      },
+      {
+        "value": "ㄴ문제의 문항 SYSOTU으로 뿌리고",
+        "ui": {
+          "active": false,
+          "left": 1064.6527434195655,
+          "top": 269.2708266071176,
+          "zIndex": 206,
+          "width": 216.58332977361164,
+          "height": 100
+        },
+        "id": "6e6fd06a-5c20-4472-af6f-bcb5f561d995"
       }
     ]
   },
@@ -672,7 +661,7 @@
             "c4638635-d158-4296-b365-8373be2cb770"
           ],
           "x": 1056.4227,
-          "y": 206.3686,
+          "y": 196.1186,
           "direction": "left"
         },
         "end": {
