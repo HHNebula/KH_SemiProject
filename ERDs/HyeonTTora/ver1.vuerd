@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -234.72221289520022,
-    "scrollLeft": -355.5573138528387,
+    "scrollTop": -293.88887721079453,
+    "scrollLeft": -534.444423207531,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -444,7 +444,7 @@
           "active": false,
           "left": 497.2795,
           "top": 333.3337,
-          "zIndex": 5,
+          "zIndex": 9,
           "widthName": 77.69580078125,
           "widthComment": 93
         },
@@ -527,9 +527,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 516.6679,
-          "top": 672.0473,
-          "zIndex": 6,
+          "left": 491.9763,
+          "top": 723.8993,
+          "zIndex": 10,
           "widthName": 63.140625,
           "widthComment": 60
         },
@@ -612,9 +612,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1307.4677,
-          "top": 720.6607,
-          "zIndex": 7,
+          "left": 1079.0726,
+          "top": 737.3277,
+          "zIndex": 12,
           "widthName": 60,
           "widthComment": 60
         },
@@ -992,8 +992,8 @@
             "f6b562d7-f925-46f9-be7d-026568fd4479",
             "bd4d429e-c23f-4bd9-90fa-d4c53f0aec78"
           ],
-          "x": 918.808525,
-          "y": 769.9223,
+          "x": 894.116925,
+          "y": 821.7743,
           "direction": "right"
         },
         "constraintName": "fk_문제_to_객관식 답 ",
@@ -1018,9 +1018,9 @@
           "columnIds": [
             "bdae3774-fe9d-4df1-b567-5cd186a5e47f"
           ],
-          "x": 1307.4677,
-          "y": 818.5357,
-          "direction": "left"
+          "x": 1380.67806875,
+          "y": 737.3277,
+          "direction": "top"
         },
         "constraintName": "fk_문제_to_서술형 답",
         "visible": true,
@@ -1063,8 +1063,8 @@
           "columnIds": [
             "f853cc6f-8e7d-4d94-b889-c9a691a32ac3"
           ],
-          "x": 918.808525,
-          "y": 704.6723,
+          "x": 894.116925,
+          "y": 756.5243,
           "direction": "right"
         },
         "end": {
@@ -1089,9 +1089,9 @@
           "columnIds": [
             "4bda39c9-af2e-4ffa-9d15-438b4aad1400"
           ],
-          "x": 1307.4677,
-          "y": 753.2857,
-          "direction": "left"
+          "x": 1179.60775625,
+          "y": 737.3277,
+          "direction": "top"
         },
         "end": {
           "tableId": "e87a6f56-d3ba-46a3-a382-eefc2de50591",
