@@ -32,7 +32,7 @@ public class Statistics {
 
 
         // 통계 보여주는 부분
-        try (
+        try {
            resultset = statement.executeQuery(query);
             
            System.out.println("|     구분     | 매우불만 | 불만 | 만족 | 매우만족 |");
@@ -46,7 +46,7 @@ public class Statistics {
         }
 
 
-        ) catch (SQLException exception) {
+        } catch (SQLException exception) {
             exception.printStackTrace();
         }
 
