@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -260,
-    "scrollLeft": -213,
+    "scrollTop": -271,
+    "scrollLeft": -197,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
