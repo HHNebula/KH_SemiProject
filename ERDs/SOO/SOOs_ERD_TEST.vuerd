@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -332.0000117222458,
-    "scrollLeft": -413.55554023495466,
-    "zoomLevel": 0.9,
+    "scrollTop": -196.4444615531845,
+    "scrollLeft": -763.5555263272051,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -745,9 +745,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 669.639,
-          "top": 267.4444,
-          "zIndex": 12,
+          "left": 712,
+          "top": 248,
+          "zIndex": 5,
           "widthName": 72.47802734375,
           "widthComment": 60
         },
@@ -824,10 +824,10 @@
       {
         "value": "1\t1\t접근성\t\n2\t1\t친절도\t\n3\t1\t청결도\t\n4\t1\t식당 만족도\t\n5\t1\t시설 만족도\t\n6\t2\t기타",
         "ui": {
-          "active": false,
+          "active": true,
           "left": 744.4444444444454,
           "top": 40.88888888888956,
-          "zIndex": 6,
+          "zIndex": 19,
           "width": 330,
           "height": 146
         },
@@ -1026,8 +1026,8 @@
           "columnIds": [
             "4bd376b6-b936-437a-9c4f-dbeac4a2987f"
           ],
-          "x": 878.855796875,
-          "y": 397.9444,
+          "x": 921.216796875,
+          "y": 378.5,
           "direction": "bottom"
         },
         "end": {
@@ -1061,8 +1061,8 @@
           "columnIds": [
             "230f42f7-272f-4325-b437-69e927f7baf4"
           ],
-          "x": 1088.0725937500001,
-          "y": 332.6944,
+          "x": 1130.43359375,
+          "y": 313.25,
           "direction": "right"
         },
         "constraintName": "fk_types_to_questions",
