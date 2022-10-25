@@ -4,7 +4,17 @@ import java.sql.*;
 
 public class Controller {
 
-	public void insertSurvey() {
+	public void insertSurvey(Statement statement, String reservID, int answer1, int answer2, int answer3, int answer4,
+			int answer5) {
+
+		String query = "INSERT INTO user_reserv_qa VALUES ( '" + reservID + "', 'Q1', " + answer1 + " ), ( '" + reservID
+				+ "', 'Q2', " + answer2 + " ), ( '" + reservID + "', 'Q3', " + answer3 + " ), ( '" + reservID
+				+ "', 'Q4', " + answer4 + " ), ( '" + reservID + "', 'Q5', " + answer5 + " );";
+
+		try {
+			statement.executeQuery(query);
+		} catch (SQLException sqlException) {
+		}
 
 	}
 
@@ -14,28 +24,18 @@ public class Controller {
 				+ "'");
 
 		try {
-			ResultSet resultSet = statement.executeQuery(query);
 
+			ResultSet resultSet = statement.executeQuery(query);
 			String userId = resultSet.getString("USER_ID");
-			
 			return checkReserv(statement, userId, checkIn, checkOut);
 
 		} catch (SQLException sqlException) {
-
 			return "Exception";
-			
 		}
 
 	}
 
 	public String checkReserv(Statement statement, String userId, String checkIn, String checkOut) {
-
-		// 성수 //
-		// 쿼리 > USER_ID 로 RESERV_ID 조회
-		// 일치하는 정보가 있다면 checkOverlap 호출
-		// 없다면 false 반환
-
-		// checkOverlap 결과를 받아 리턴
 
 		String query = "SELECT RESERV_ID, " + "DATE_FORMAT(CHECK_IN, '%Y-%m-%d') AS CHECK_IN, "
 				+ "DATE_FORMAT(CHECK_OUT, '%Y-%m-%d') AS CHECK_OUT " + "FROM reservations WHERE USER_ID = '"
@@ -47,12 +47,12 @@ public class Controller {
 
 			while (resultSet.next()) {
 
-				String id = resultSet.getString("RESERV_ID"); // 예약번호 저장
-				String in = resultSet.getString("CHECK_IN"); // 체크인 저장
-				String out = resultSet.getString("CHECK_OUT"); // 체크아웃 저장
+				String id = resultSet.getString("RESERV_ID");
+				String in = resultSet.getString("CHECK_IN");
+				String out = resultSet.getString("CHECK_OUT");
 
-				if (in.equals(checkIn) && out.equals(checkOut)) { // 입력값과 저장값이 같은게 있다면
-					if (checkOverlap(statement, id)) { // 중복인지 검사함
+				if (in.equals(checkIn) && out.equals(checkOut)) {
+					if (checkOverlap(statement, id)) {
 						return id;
 					}
 				}
@@ -62,31 +62,28 @@ public class Controller {
 			return "Exception";
 
 		} catch (SQLException sqlException) {
-
 			return "Exception";
-
 		}
 
 	}
 
 	public boolean checkOverlap(Statement statement, String id) {
 
-		// 성수 //
-		// 쿼리 USER_ID 로 RESERV_ID 조회
-		// 작성된 내역이 없다 true 반환
-		// 작성된 내역이 있다면 false 반환
-
 		String query = "SELECT * FROM user_reserv_qa WHERE RESERV_ID = '" + id + "';";
+
 		try {
+
 			ResultSet resultSet = statement.executeQuery(query);
 			return false;
+
 		} catch (SQLException sqlException) {
-
-			// SQLException 이 발생했다는 것은 설문이 조회되지 않는다는 것
 			return true;
-
 		}
 
+	}
+
+	public void totalsSatistics(Statement statement) {
+		String query = "";
 	}
 
 }
