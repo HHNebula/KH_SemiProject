@@ -37,11 +37,11 @@ public class Statistics {
            System.out.println("|     구분     | 매우 불만 |  불만  |  만족  | 매우 만족 |");
            while(resultset.next()){
             String Question = resultset.getString("QUESTION");
-            String AS1 = resultset.getString("매우 불만");
-            String AS2 = resultset.getString("불만");
-            String AS3 = resultset.getString("만족");
-            String AS4 = resultset.getString("매우 만족");
-            System.out.print( Question+ " " + " : " + " " + AS1 + " \t " + AS2 +  " \t " +AS3 + " \t " + AS4 + "\n" );
+            int AS1 = resultset.getInt("매우 불만");
+            int AS2 = resultset.getInt("불만");
+            int AS3 = resultset.getInt("만족");
+            int AS4 = resultset.getInt("매우 만족");
+            System.out.printf("%s : %3d %3d %3d %3d" ,Question, AS1, AS2, AS3, AS4 );
 
            
         }
