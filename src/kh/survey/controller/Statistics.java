@@ -8,7 +8,7 @@ public class Statistics {
         
 // 갯수 구하는 쿼리
 // SELECT *
-// FROM (SELECT QUESTION_ID, COUNT(ANSWER_ID) AS AS1
+// FROM (SELECT COUNT(ANSWER_ID) AS AS1
 // FROM user_reserv_qa
 // WHERE ANSWER_ID = 'AS1'AND QUESTION_ID = 'Q1') AS AS1
 // INNER JOIN (SELECT COUNT(ANSWER_ID) AS AS2
