@@ -166,8 +166,7 @@ public class Model {
             System.out.println("-----------------------------------------------------------");
             
             // 조회 메서드 호출
-            Statistics st = new Statistics();
-            st.statistics(statement);
+            controller.totalsSatistics(statement);
 
             System.out.println("-----------------------------------------------------------");
             System.out.println("만족도 설문 통계 조회가 완료되었습니다.");
