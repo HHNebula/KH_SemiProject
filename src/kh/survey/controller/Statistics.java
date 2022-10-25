@@ -5,6 +5,15 @@ import java.sql.*;
 public class Statistics {
     public void statistics(Statement statement) {
 
+//최종목적
+
+// |     구분     | 매우 불만 |   불만   |   만족   |   매우만족   |
+// | 접근 편리성 |     n     |     n    |     n    |      n      |
+// | 직원 친절도 |     n     |     n    |     n    |      n      |
+// | 호텔 청결도 |     n     |     n    |     n    |      n      |
+// | 음식 만족도 |     n     |     n    |     n    |      n      |
+// | 시설 만족도 |     n     |     n    |     n    |      n      | 
+
         
 // 갯수 구하는 쿼리
 // SELECT *
