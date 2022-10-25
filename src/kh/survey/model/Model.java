@@ -36,12 +36,12 @@ public class Model {
 
             System.out.println("-----------------------------------------------------------\r\n" + "Welcome :)\r\n"
                     + "L4 Hotel Satisfaction Survey Manager Run.\r\n"
-                    + "-----------------------------------------------------------");
+                    + "-----------------------------------------------------------\n");
 
             Loop: while (true) {
 
                 try {
-                    System.out.print("\n실행할 메뉴를 입력해주세요.\n[A] 만족도 설문 시작\n[B] 전체 통계 조회\n[Z] 프로그램 종료\n 입력 > ");
+                    System.out.print("실행할 메뉴를 입력해주세요.\n[A] 만족도 설문 시작\n[B] 전체 통계 조회\n[Z] 프로그램 종료\n입력 > ");
                     String input = br.readLine();
 
                     switch (input) {
@@ -57,7 +57,7 @@ public class Model {
                             break Loop;
 
                         default:
-                            System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+                            System.out.println("\n잘못 입력하셨습니다. 다시 입력해주세요.\n");
                     }
                 } catch (IOException ioException) {
                 }
@@ -68,7 +68,9 @@ public class Model {
         SQLException sqlException) {
             // DB 접속 장애 알림
         } finally {
-
+            System.out.print("\n-----------------------------------------------------------\r\n"
+                    + "Good Bye :)\r\n" + "Exit L4 Hotel Satisfaction Survey Manager.\r\n"
+                    + "-----------------------------------------------------------\n");
         }
 
     }
