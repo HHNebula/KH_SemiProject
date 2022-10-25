@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import kh.survey.controller.Controller;
+import kh.survey.controller.Statistics;
 
 public class Model {
 
@@ -159,7 +160,22 @@ public class Model {
     public void inquery() { // 보경
 
         // 조회기능 구현
-        // 조회 메서드 호출
+        try {
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("만족도 설문 통계를 조회합니다.");
+            System.out.println("-----------------------------------------------------------");
+            
+            // 조회 메서드 호출
+            new Statistics();
+
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("만족도 설문 통계 조회가 완료되었습니다.");
+            System.out.println("-----------------------------------------------------------");
+
+        }catch (Exception exception){
+          
+        }
+        
 
     }
 
