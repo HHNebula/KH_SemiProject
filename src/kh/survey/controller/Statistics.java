@@ -18,13 +18,13 @@ public class Statistics {
 
 
 // 갯수 구하는 쿼리
-        String query = "SELECT questions.QUESTION, COUNT(CASE WHEN ANSWER_ID = 'AS1' THEN 1 END ) AS '매우 불만',"+
+        String query = "SELECT questions.QUESTION AS 질문들, COUNT(CASE WHEN ANSWER_ID = 'AS1' THEN 1 END ) AS '매우 불만',"+
         "COUNT(CASE WHEN ANSWER_ID = 'AS2' THEN 1 END ) AS '불만' ," +
         "COUNT(CASE WHEN ANSWER_ID = 'AS3' THEN 1 END ) AS '만족'," +
         "COUNT(CASE WHEN ANSWER_ID = 'AS4' THEN 1 END ) AS '매우 만족'"+
         "FROM user_reserv_qa"+
         "INNER JOIN questions ON user_reserv_qa.QUESTION_ID = questions.QUESTION_ID"+
-        "GROUP BY user_reserv_qa.QUESTION_ID;";
+        "GROUP BY user_reserv_qa.QUESTION_ID";
 
         ResultSet resultset;
 
@@ -36,7 +36,7 @@ public class Statistics {
             
            System.out.println("|     구분     | 매우 불만 |  불만  |  만족  | 매우 만족 |");
            while(resultset.next()){
-            String Question = resultset.getString("QUESTION");
+            String Question = resultset.getString("질문들");
             int AS1 = resultset.getInt("매우 불만");
             int AS2 = resultset.getInt("불만");
             int AS3 = resultset.getInt("만족");

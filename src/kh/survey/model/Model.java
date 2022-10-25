@@ -50,7 +50,7 @@ public class Model {
                             break;
 
                         case "B":
-                            inquery();
+                            inquery(statement);
                             break;
 
                         case "Z":
@@ -157,7 +157,7 @@ public class Model {
 
     }
 
-    public void inquery() { // 보경
+    public void inquery(Statement statement) { // 보경
 
         // 조회기능 구현
         try {
@@ -166,7 +166,8 @@ public class Model {
             System.out.println("-----------------------------------------------------------");
             
             // 조회 메서드 호출
-            new Statistics();
+            Statistics st = new Statistics();
+            st.statistics(statement);
 
             System.out.println("-----------------------------------------------------------");
             System.out.println("만족도 설문 통계 조회가 완료되었습니다.");
