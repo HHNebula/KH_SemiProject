@@ -41,7 +41,7 @@ public class Statistics {
             int AS2 = resultset.getInt("불만");
             int AS3 = resultset.getInt("만족");
             int AS4 = resultset.getInt("매우 만족");
-            System.out.printf("%s : %3d %3d %3d %3d" ,Question, AS1, AS2, AS3, AS4 );
+            System.out.printf("%s : %3d %3d %3d %3d \n" ,Question, AS1, AS2, AS3, AS4 );
 
            
         }
