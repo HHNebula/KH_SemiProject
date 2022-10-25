@@ -1,12 +1,26 @@
 package kh.survey.model;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Model {
 
-    public Model() {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    private String userId;
+    private String loginId;
+    private String loginPw;
+    private String name;
+    private String checkIn;
+    private String checkOut;
+
+    public Model() throws IOException {
         menu();
+        br.readLine();
     }
 
-    public void menu() {
+    public void menu() { // 현정
 
         // 메뉴 출력
         // A > 설문 시작
@@ -15,7 +29,7 @@ public class Model {
 
     }
 
-    public void startSurvey() {
+    public void startSurvey() { // 성수
 
         // 설문 구현
         // 사용자한테 정보 입력 요구
@@ -24,7 +38,7 @@ public class Model {
 
     }
 
-    public void inquery() {
+    public void inquery() { // 보경
 
         // 조회기능 구현
         // 조회 메서드 호출
