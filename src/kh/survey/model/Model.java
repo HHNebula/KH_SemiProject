@@ -60,19 +60,19 @@ public class Model {
                             System.out.println("\n잘못 입력하셨습니다. 다시 입력해주세요.\n");
                     }
                 } catch (IOException ioException) {
+                } finally {
+                    System.out.print("\n-----------------------------------------------------------\r\n"
+                            + "Good Bye :)\r\n" + "Exit L4 Hotel Satisfaction Survey Manager.\r\n"
+                            + "-----------------------------------------------------------\n");
+
                 }
             }
 
-        } catch (
-
-        SQLException sqlException) {
-            // DB 접속 장애 알림
-        } finally {
+        } catch (SQLException sqlException) {
             System.out.print("\n-----------------------------------------------------------\r\n"
-                    + "Good Bye :)\r\n" + "Exit L4 Hotel Satisfaction Survey Manager.\r\n"
+                    + "Cannot Find DB\r\n"
                     + "-----------------------------------------------------------\n");
         }
-
     }
 
     public void startSurvey(Statement statement) { // 성수
@@ -94,9 +94,9 @@ public class Model {
             while (true) {
                 System.out.println("[ 3 ] 투숙 기간을 입력해주세요. ( ex. 2022-10-21 )");
                 System.out.print("Check In > ");
-                this.checkIn = br.readLine();
+                checkIn = br.readLine();
                 System.out.print("Check Out > ");
-                this.checkOut = br.readLine();
+                checkOut = br.readLine();
 
                 Pattern pattern = Pattern
                         .compile("^((19|20)\\d\\d)?([- /.])?(0[1-9]|1[012])([- /.])?(0[1-9]|[12][0-9]|3[01])$");
