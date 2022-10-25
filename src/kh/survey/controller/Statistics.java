@@ -41,7 +41,7 @@ public class Statistics {
             String AS2 = resultset.getString("불만");
             String AS3 = resultset.getString("만족");
             String AS4 = resultset.getString("매우 만족");
-            System.out.print( Question + " : " + AS1 + AS2 + AS3 + AS4 + "\n" );
+            System.out.print( Question+ " " + " : " + " " + AS1 + " \t " + AS2 +  " \t " +AS3 + " \t " + AS4 + "\n" );
 
            
         }
