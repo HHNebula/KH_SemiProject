@@ -18,6 +18,7 @@ public class Controller {
 
 	}
 
+	// [성수] 사용자가 입력한 정보들이 유효한지, 설문 작성이 가능한 상태인지 확인
 	public String checkUserId(Statement statement, String loginID, String loginPW, String checkIn, String checkOut) {
 
 		String query = ("SELECT USER_ID FROM users WHERE LOGIN_ID = '" + loginID + "' AND LOGIN_PW = '" + loginPW
@@ -27,6 +28,8 @@ public class Controller {
 
 			ResultSet resultSet = statement.executeQuery(query);
 			String userId = resultSet.getString("USER_ID");
+
+			// 확인된 USER_ID 로 숙박 내역이 있는지 확인
 			return checkReserv(statement, userId, checkIn, checkOut);
 
 		} catch (SQLException sqlException) {
@@ -35,31 +38,22 @@ public class Controller {
 
 	}
 
+	// [성수] 유저 아이디와 입력한 체크인, 아웃 날짜로 투숙 내역이 있는지 조회
 	public String checkReserv(Statement statement, String userId, String checkIn, String checkOut) {
 
-		String query = "SELECT RESERV_ID, " + "DATE_FORMAT(CHECK_IN, '%Y-%m-%d') AS CHECK_IN, "
-				+ "DATE_FORMAT(CHECK_OUT, '%Y-%m-%d') AS CHECK_OUT " + "FROM reservations WHERE USER_ID = '"
-				+ userId + "';";
+		String query = ("SELECT RESERV_ID FROM reservations WHERE USER_UD = '"+ userId +"' AND CHECK_IN = '" + checkIn + "' AND CHECK_OUT = '"
+				+ checkOut + "';");
 
 		try {
 
 			ResultSet resultSet = statement.executeQuery(query); // 투숙 내역이 있는지 확인
 
-			while (resultSet.next()) {
-
-				String id = resultSet.getString("RESERV_ID");
-				String in = resultSet.getString("CHECK_IN");
-				String out = resultSet.getString("CHECK_OUT");
-
-				if (in.equals(checkIn) && out.equals(checkOut)) {
-					if (checkOverlap(statement, id)) {
-						return id;
-					}
-				}
-
+			String reservId = resultSet.getString("RESERV_ID");
+			if (checkOverlap(statement, reservId)) {
+				return reservId;
+			} else {
+				return "overlap";
 			}
-
-			return "Exception";
 
 		} catch (SQLException sqlException) {
 			return "Exception";
@@ -67,13 +61,16 @@ public class Controller {
 
 	}
 
+	// 중복 여부 검사
 	public boolean checkOverlap(Statement statement, String id) {
 
 		String query = "SELECT * FROM user_reserv_qa WHERE RESERV_ID = '" + id + "';";
 
 		try {
 
+			// 있다면 중복
 			ResultSet resultSet = statement.executeQuery(query);
+			
 			return false;
 
 		} catch (SQLException sqlException) {
