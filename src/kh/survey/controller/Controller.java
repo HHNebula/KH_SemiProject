@@ -82,14 +82,14 @@ public class Controller {
 		try {
 			resultset = statement.executeQuery(query);
 
-			System.out.println("|     구분     | 매우 불만 |  불만  |  만족  | 매우 만족 |");
+			System.out.println("구분\t\t매우 불만\t불만\t만족\t매우 만족\t");
 			while (resultset.next()) {
-				String Question = resultset.getString("질문들");
-				int AS1 = resultset.getInt("매우 불만");
-				int AS2 = resultset.getInt("불만");
-				int AS3 = resultset.getInt("만족");
-				int AS4 = resultset.getInt("매우 만족");
-				System.out.printf("%s : %7d %9d %9d %9d \n", Question, AS1, AS2, AS3, AS4);
+				String question = resultset.getString("질문들");
+				int as1 = resultset.getInt("매우 불만");
+				int as2 = resultset.getInt("불만");
+				int as3 = resultset.getInt("만족");
+				int as4 = resultset.getInt("매우 만족");
+				System.out.printf("%s : %9d %9d %9d %9d \n", question, as1, as2, as3, as4);
 
 			}
 
