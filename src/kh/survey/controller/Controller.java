@@ -10,7 +10,7 @@ public class Controller {
 		String query = "INSERT INTO user_reserv_qa VALUES ( '" + reservId + "', 'Q1', 'AS" + answer1 + "' ), ( '"
 				+ reservId
 				+ "', 'Q2', 'AS" + answer2 + "' ), ( '" + reservId + "', 'Q3', 'AS" + answer3 + "' ), ( '" + reservId
-				+ "', 'Q4', 'AS" + answer4 + "' ), ( '" + reservId + "', 'Q5', 'AS" + answer5 + "' );";
+				+ "', 'Q4', 'AS" + answer4 + "' ), ( '" + reservId + "', 'Q5', 'AS" + answer5 + "' )";
 
 		try {
 			statement.executeQuery(query);
@@ -23,7 +23,7 @@ public class Controller {
 	public String checkUserId(Statement statement, String loginID, String loginPW) {
 
 		String query = ("SELECT USER_ID FROM users WHERE LOGIN_ID = '" + loginID + "' AND LOGIN_PW = '" + loginPW
-				+ "';");
+				+ "'");
 		try {
 			ResultSet resultSet = statement.executeQuery(query);
 			resultSet.next();
@@ -38,7 +38,7 @@ public class Controller {
 	public String checkReserv(Statement statement, String userId, String checkIn, String checkOut) {
 
 		String query = ("SELECT RESERV_ID FROM reservations WHERE USER_ID = '" + userId + "' AND CHECK_IN = '" + checkIn
-				+ "' AND CHECK_OUT = '" + checkOut + "';");
+				+ "' AND CHECK_OUT = '" + checkOut + "'");
 		try {
 			ResultSet resultSet = statement.executeQuery(query); // 투숙 내역이 있는지 확인
 			resultSet.next();
@@ -52,7 +52,7 @@ public class Controller {
 	// 중복 여부 검사
 	public boolean checkOverlap(Statement statement, String id) {
 
-		String query = "SELECT * FROM user_reserv_qa WHERE RESERV_ID = '" + id + "';";
+		String query = "SELECT * FROM user_reserv_qa WHERE RESERV_ID = '" + id + "'";
 
 		try {
 
