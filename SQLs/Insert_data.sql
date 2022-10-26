@@ -19,7 +19,7 @@ VALUES ( 'Q1', '접근 편리성' ),
 ( 'Q2', '직원 친절도' ),
 ( 'Q3', '호텔 청결도' ),
 ( 'Q4', '음식 만족도' ),
-( 'Q5', '부대시설 이용 편의성' );
+( 'Q5', '시설 편의성' );
 
 INSERT INTO answers ( ANSWER_ID, ANSWER )
 VALUES ( 'AS1', 1 ),

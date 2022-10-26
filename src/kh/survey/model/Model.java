@@ -37,7 +37,7 @@ public class Model {
 
 			System.out.println("-----------------------------------------------------------\r\n" + "Welcome :)\r\n"
 					+ "L4 Hotel Satisfaction Survey Manager Run.\r\n"
-					+ "-----------------------------------------------------------\n");
+					+ "-----------------------------------------------------------");
 
 			try {
 				Loop: while (true) {
@@ -63,14 +63,14 @@ public class Model {
 			} catch (IOException ioException) {
 				ioException.printStackTrace();
 			} finally {
-				System.out.print("\n-----------------------------------------------------------\r\n" + "Good Bye :)\r\n"
+				System.out.print("-----------------------------------------------------------\r\n" + "Good Bye :)\r\n"
 						+ "Exit L4 Hotel Satisfaction Survey Manager.\r\n"
 						+ "-----------------------------------------------------------\n");
 
 			}
 
 		} catch (SQLException sqlException) {
-			System.out.print("\n-----------------------------------------------------------\r\n" + "Cannot Find DB\r\n"
+			System.out.print("-----------------------------------------------------------\r\n" + "Cannot Find DB\r\n"
 					+ "-----------------------------------------------------------\n");
 		}
 	}
@@ -91,6 +91,16 @@ public class Model {
 			System.out.print("입력 > ");
 			loginPw = br.readLine();
 
+			userId = controller.checkUserId(statement, loginId, loginPw);
+
+			if (userId.equals("Exception")) {
+				System.out.println("-----------------------------------------------------------");
+				System.out.println("일치하는 정보가 없어 처음으로 돌아갑니다.");
+				System.out.println("정보를 다시 확인해주세요.");
+				System.out.println("-----------------------------------------------------------");
+				return;
+			}
+
 			while (true) {
 				System.out.println("[ 3 ] 투숙 기간을 입력해주세요. ( ex. 2022-10-21 )");
 				System.out.print("Check In > ");
@@ -110,16 +120,6 @@ public class Model {
 				System.out.println("날짜 양식과 동일하게 입력해주세요.");
 				System.out.println("-----------------------------------------------------------");
 
-			}
-
-			userId = controller.checkUserId(statement, loginId, loginPw);
-
-			if (userId.equals("Exception")) {
-				System.out.println("-----------------------------------------------------------");
-				System.out.println("일치하는 정보가 없어 처음으로 돌아갑니다.");
-				System.out.println("정보를 다시 확인해주세요.");
-				System.out.println("-----------------------------------------------------------");
-				return;
 			}
 
 			reservId = controller.checkReserv(statement, userId, checkIn, checkOut);
