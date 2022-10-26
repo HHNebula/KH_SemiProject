@@ -45,19 +45,19 @@ public class Model {
 					String input = br.readLine();
 
 					switch (input) {
-					case "A":
-						startSurvey(statement);
-						break;
+						case "A":
+							startSurvey(statement);
+							break;
 
-					case "B":
-						inquery(statement);
-						break;
+						case "B":
+							inquery(statement);
+							break;
 
-					case "Z":
-						break Loop;
+						case "Z":
+							break Loop;
 
-					default:
-						System.out.println("\n잘못 입력하셨습니다. 다시 입력해주세요.\n");
+						default:
+							System.out.println("\n잘못 입력하셨습니다. 다시 입력해주세요.\n");
 					}
 				}
 			} catch (IOException ioException) {
@@ -206,40 +206,40 @@ public class Model {
 					System.out.println("-----------------------------------------------------------");
 				}
 			}
-			
+
 			controller.insertSurvey(statement, reservId, answer1, answer2, answer3, answer4, answer5);
-			
+
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("만족도 설문 제출이 완료되었습니다.");
 			System.out.println("L4 호텔을 이용해주셔서 감사합니다.");
 			System.out.println("-----------------------------------------------------------");
-			
+
 		} catch (IOException ioException) {
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("입력 오류가 발생되어 처음으로 돌아갑니다.");
 			System.out.println("-----------------------------------------------------------");
 		}
-		
+
 	}
 
-    public void inquery(Statement statement) { // 보경
-        // 조회기능 구현
-        try {
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("만족도 설문 통계를 조회합니다.");
-            System.out.println("-----------------------------------------------------------");
-            
-            // 조회 메서드 호출
-            controller.totalsSatistics(statement);
+	public void inquery(Statement statement) { // 보경
+		// 조회기능 구현
+		try {
+			System.out.println("-----------------------------------------------------------");
+			System.out.println("만족도 설문 통계를 조회합니다.");
+			System.out.println("-----------------------------------------------------------");
 
-            System.out.println("-----------------------------------------------------------");
-            System.out.println("만족도 설문 통계 조회가 완료되었습니다.");
-            System.out.println("-----------------------------------------------------------");
+			// 조회 메서드 호출
+			controller.totalsSatistics(statement);
 
-        }catch (Exception exception){
-          
-        }
-        
-    }
+			System.out.println("-----------------------------------------------------------");
+			System.out.println("만족도 설문 통계 조회가 완료되었습니다.");
+			System.out.println("-----------------------------------------------------------");
+
+		} catch (Exception exception) {
+
+		}
+
+	}
 
 }
