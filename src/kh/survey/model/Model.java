@@ -99,7 +99,7 @@ public class Model {
                 checkOut = br.readLine();
 
                 Pattern pattern = Pattern
-                        .compile("^((19|20)\\d\\d)?([- /.])?(0[1-9]|1[012])([- /.])?(0[1-9]|[12][0-9]|3[01])$");
+                        .compile("(?:(?:19|20)[\\d]{2})-[0-1][0-2]-(0[1-9]|[12][0-9]|3[01])$");
                 Matcher matcher1 = pattern.matcher(checkIn);
                 Matcher matcher2 = pattern.matcher(checkOut);
 
@@ -121,32 +121,60 @@ public class Model {
                 return;
             }
 
-            System.out.println("[ 5 ] 호텔을 찾아오시는 길은 편리하셨습니까?");
+            while(true){
+            System.out.println("[ 4 ] 호텔을 찾아오시는 길은 편리하셨습니까?");
+            System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
+            System.out.print("번호입력 > ");
+            
+            answer1 = parseInt(br.readLine());
+                if(answer1>0 || answer1<5){
+                    break;
+                }
+                    System.out.println("정상적인 숫자를 입력하세요");
+                
+            }
+            
+            System.out.println("[ 5 ] 호텔의 전체적인 청결도는 만족하셨습니까?");
             System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
             System.out.print("번호입력 > ");
 
-            System.out.println("[ 6 ] 호텔의 전체적인 청결도는 만족하셨습니까?");
+            answer2 = parseInt(br.readLine());
+     
+            
+            System.out.println("[ 6 ] 식당의 음식 만족도는 어떠셨습니까?");
             System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
             System.out.print("번호입력 > ");
 
-            System.out.println("[ 7 ] 식당의 음식 만족도는 어떠셨습니까?");
+            answer3 = parseInt(br.readLine());
+       
+     
+            
+            System.out.println("[ 7 ] 호텔을 찾아오시는 길은 편리하셨습니까?");
             System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
             System.out.print("번호입력 > ");
 
-            System.out.println("[ 8 ] 호텔을 찾아오시는 길은 편리하셨습니까?");
+            answer4 = parseInt(br.readLine());
+           
+         
+            
+            System.out.println("[ 8 ] 부대시설 이용은 편리하셨습니까?");
             System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
             System.out.print("번호입력 > ");
 
-            System.out.println("[ 9 ] 부대시설 이용은 편리하셨습니까?");
-            System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
-            System.out.print("번호입력 > ");
-
+            answer5 = parseInt(br.readLine());
+     
+            
+        
         } catch (IOException ioException) {
             System.out.println("-----------------------------------------------------------");
             System.out.println("입력 오류가 발생되어 처음으로 돌아갑니다.");
             System.out.println("-----------------------------------------------------------");
         }
 
+    }
+
+    private int parseInt(String readLine) {
+        return 0;
     }
 
     public void inquery() { // 보경
