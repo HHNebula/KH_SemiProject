@@ -12,8 +12,6 @@ public class Controller {
 				+ "( '" + reservId + "', 'Q3', 'AS" + answer3 + "' ), " + "( '" + reservId + "', 'Q4', 'AS" + answer4 + "' )," + "( '" + reservId
 				+ "', 'Q5', 'AS" + answer5 + "' )");
 
-				System.out.println(query);
-
 		try {
 			ResultSet resultSet = statement.executeQuery(query);
 			resultSet.next();
