@@ -7,13 +7,16 @@ public class Controller {
 	public void insertSurvey(Statement statement, String reservId, int answer1, int answer2, int answer3, int answer4,
 			int answer5) {
 
-		String query = "INSERT INTO user_reserv_qa VALUES ( '" + reservId + "', 'Q1', 'AS" + answer1 + "' ), ( '"
-				+ reservId
-				+ "', 'Q2', 'AS" + answer2 + "' ), ( '" + reservId + "', 'Q3', 'AS" + answer3 + "' ), ( '" + reservId
-				+ "', 'Q4', 'AS" + answer4 + "' ), ( '" + reservId + "', 'Q5', 'AS" + answer5 + "' )";
+		String query = ("INSERT INTO user_reserv_qa " + "VALUES ( '" + reservId + "', 'Q1', 'AS" + answer1 + "' ),"
+				+ "( '" + reservId + "', 'Q2', 'AS" + answer2 + "' ),"
+				+ "( '" + reservId + "', 'Q3', 'AS" + answer3 + "' ), " + "( '" + reservId + "', 'Q4', 'AS" + answer4 + "' )," + "( '" + reservId
+				+ "', 'Q5', 'AS" + answer5 + "' )");
+
+				System.out.println(query);
 
 		try {
-			statement.executeQuery(query);
+			ResultSet resultSet = statement.executeQuery(query);
+			resultSet.next();
 		} catch (SQLException sqlException) {
 		}
 
