@@ -4,87 +4,111 @@ import java.sql.*;
 
 public class Controller {
 
-	public void insertSurvey() {
+	public void insertSurvey(Statement statement, String reservID, int answer1, int answer2, int answer3, int answer4,
+			int answer5) {
+
+		String query = "INSERT INTO user_reserv_qa VALUES ( '" + reservID + "', 'Q1', " + answer1 + " ), ( '" + reservID
+				+ "', 'Q2', " + answer2 + " ), ( '" + reservID + "', 'Q3', " + answer3 + " ), ( '" + reservID
+				+ "', 'Q4', " + answer4 + " ), ( '" + reservID + "', 'Q5', " + answer5 + " );";
+
+		try {
+			statement.executeQuery(query);
+		} catch (SQLException sqlException) {
+		}
 
 	}
 
+	// [성수] 사용자가 입력한 정보들이 유효한지, 설문 작성이 가능한 상태인지 확인
 	public String checkUserId(Statement statement, String loginID, String loginPW, String checkIn, String checkOut) {
 
 		String query = ("SELECT USER_ID FROM users WHERE LOGIN_ID = '" + loginID + "' AND LOGIN_PW = '" + loginPW
 				+ "'");
 
 		try {
-			ResultSet resultSet = statement.executeQuery(query);
 
+			ResultSet resultSet = statement.executeQuery(query);
 			String userId = resultSet.getString("USER_ID");
-			
+
+			// 확인된 USER_ID 로 숙박 내역이 있는지 확인
 			return checkReserv(statement, userId, checkIn, checkOut);
 
 		} catch (SQLException sqlException) {
-
 			return "Exception";
-			
 		}
 
 	}
 
+	// [성수] 유저 아이디와 입력한 체크인, 아웃 날짜로 투숙 내역이 있는지 조회
 	public String checkReserv(Statement statement, String userId, String checkIn, String checkOut) {
 
-		// 성수 //
-		// 쿼리 > USER_ID 로 RESERV_ID 조회
-		// 일치하는 정보가 있다면 checkOverlap 호출
-		// 없다면 false 반환
-
-		// checkOverlap 결과를 받아 리턴
-
-		String query = "SELECT RESERV_ID, " + "DATE_FORMAT(CHECK_IN, '%Y-%m-%d') AS CHECK_IN, "
-				+ "DATE_FORMAT(CHECK_OUT, '%Y-%m-%d') AS CHECK_OUT " + "FROM reservations WHERE USER_ID = '"
-				+ userId + "';";
+		String query = ("SELECT RESERV_ID FROM reservations WHERE USER_UD = '" + userId + "' AND CHECK_IN = '" + checkIn
+				+ "' AND CHECK_OUT = '"
+				+ checkOut + "';");
 
 		try {
 
 			ResultSet resultSet = statement.executeQuery(query); // 투숙 내역이 있는지 확인
 
-			while (resultSet.next()) {
-
-				String id = resultSet.getString("RESERV_ID"); // 예약번호 저장
-				String in = resultSet.getString("CHECK_IN"); // 체크인 저장
-				String out = resultSet.getString("CHECK_OUT"); // 체크아웃 저장
-
-				if (in.equals(checkIn) && out.equals(checkOut)) { // 입력값과 저장값이 같은게 있다면
-					if (checkOverlap(statement, id)) { // 중복인지 검사함
-						return id;
-					}
-				}
-
+			String reservId = resultSet.getString("RESERV_ID");
+			if (checkOverlap(statement, reservId)) {
+				return reservId;
+			} else {
+				return "overlap";
 			}
 
-			return "Exception";
-
 		} catch (SQLException sqlException) {
-
 			return "Exception";
-
 		}
 
 	}
 
+	// 중복 여부 검사
 	public boolean checkOverlap(Statement statement, String id) {
 
-		// 성수 //
-		// 쿼리 USER_ID 로 RESERV_ID 조회
-		// 작성된 내역이 없다 true 반환
-		// 작성된 내역이 있다면 false 반환
-
 		String query = "SELECT * FROM user_reserv_qa WHERE RESERV_ID = '" + id + "';";
+
 		try {
+
+			// 있다면 중복
 			ResultSet resultSet = statement.executeQuery(query);
+
 			return false;
+
 		} catch (SQLException sqlException) {
-
-			// SQLException 이 발생했다는 것은 설문이 조회되지 않는다는 것
 			return true;
+		}
 
+	}
+
+	public void totalsSatistics(Statement statement) { // 보경
+
+		// 총 갯수 구하는 쿼리
+		String query = "SELECT questions.QUESTION AS '질문들', COUNT(CASE WHEN ANSWER_ID = 'AS1' THEN 1 END ) AS '매우 불만', "
+				+ " COUNT(CASE WHEN ANSWER_ID = 'AS2' THEN 1 END ) AS '불만', "
+				+ " COUNT(CASE WHEN ANSWER_ID = 'AS3' THEN 1 END ) AS '만족', "
+				+ " COUNT(CASE WHEN ANSWER_ID = 'AS4' THEN 1 END ) AS '매우 만족' "
+				+ " FROM user_reserv_qa INNER JOIN questions ON user_reserv_qa.QUESTION_ID = questions.QUESTION_ID GROUP BY user_reserv_qa.QUESTION_ID";
+
+		ResultSet resultset;
+
+		// 통계 보여주는 부분
+		// while문으로 데이터가 없을때까지 추출
+		try {
+			resultset = statement.executeQuery(query);
+
+			System.out.println("|     구분     | 매우 불만 |  불만  |  만족  | 매우 만족 |");
+			while (resultset.next()) {
+				String Question = resultset.getString("질문들");
+				int AS1 = resultset.getInt("매우 불만");
+				int AS2 = resultset.getInt("불만");
+				int AS3 = resultset.getInt("만족");
+				int AS4 = resultset.getInt("매우 만족");
+				System.out.printf("%s : %7d %9d %9d %9d \n", Question, AS1, AS2, AS3, AS4);
+
+			}
+
+		} catch (SQLException exception) {
+			exception.printStackTrace();
 		}
 
 	}

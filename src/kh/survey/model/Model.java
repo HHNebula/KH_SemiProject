@@ -6,13 +6,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import kh.survey.controller.Controller;
+import kh.survey.controller.Statistics;
 
 public class Model {
 
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     Controller controller = new Controller();
 
-    private String userId;
+    private String reservID;
     private String loginId;
     private String loginPw;
     private String checkIn;
@@ -38,9 +39,8 @@ public class Model {
                     + "L4 Hotel Satisfaction Survey Manager Run.\r\n"
                     + "-----------------------------------------------------------\n");
 
-            Loop: while (true) {
-
-                try {
+            try {
+                Loop: while (true) {
                     System.out.print("실행할 메뉴를 입력해주세요.\n[A] 만족도 설문 시작\n[B] 전체 통계 조회\n[Z] 프로그램 종료\n입력 > ");
                     String input = br.readLine();
 
@@ -50,7 +50,7 @@ public class Model {
                             break;
 
                         case "B":
-                            inquery();
+                            inquery(statement);
                             break;
 
                         case "Z":
@@ -59,13 +59,14 @@ public class Model {
                         default:
                             System.out.println("\n잘못 입력하셨습니다. 다시 입력해주세요.\n");
                     }
-                } catch (IOException ioException) {
-                } finally {
-                    System.out.print("\n-----------------------------------------------------------\r\n"
-                            + "Good Bye :)\r\n" + "Exit L4 Hotel Satisfaction Survey Manager.\r\n"
-                            + "-----------------------------------------------------------\n");
-
                 }
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } finally {
+                System.out.print("\n-----------------------------------------------------------\r\n"
+                        + "Good Bye :)\r\n" + "Exit L4 Hotel Satisfaction Survey Manager.\r\n"
+                        + "-----------------------------------------------------------\n");
+
             }
 
         } catch (SQLException sqlException) {
@@ -107,16 +108,23 @@ public class Model {
                     break;
                 }
 
+                System.out.println("-----------------------------------------------------------");
                 System.out.println("날짜 양식과 동일하게 입력해주세요.");
-
+                System.out.println("-----------------------------------------------------------");
+    
             }
-
-            String userId = controller.checkUserId(statement, loginId, loginPw, checkIn, checkOut);
-
-            if (userId.equals("Eception")) {
+            
+            reservID = controller.checkUserId(statement, loginId, loginPw, checkIn, checkOut);
+            
+            if (reservID.equals("Exception")) {
                 System.out.println("-----------------------------------------------------------");
                 System.out.println("일치하는 정보가 없어 처음으로 돌아갑니다.");
                 System.out.println("정보를 다시 확인해주세요.");
+                System.out.println("-----------------------------------------------------------");
+                return;
+            } else if (reservID.equals("overlap")) {
+                System.out.println("-----------------------------------------------------------");
+                System.out.println("이미 설문 제출이 완료된 일정으로 확인되어 처음으로 돌아갑니다.");
                 System.out.println("-----------------------------------------------------------");
                 return;
             }
@@ -173,14 +181,33 @@ public class Model {
 
     }
 
+<<<<<<< HEAD
     private int parseInt(String readLine) {
         return 0;
     }
 
     public void inquery() { // 보경
+=======
+    public void inquery(Statement statement) { // 보경
+>>>>>>> 196fbd656c8d365994184e3a1d33e581cf7d665f
 
         // 조회기능 구현
-        // 조회 메서드 호출
+        try {
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("만족도 설문 통계를 조회합니다.");
+            System.out.println("-----------------------------------------------------------");
+            
+            // 조회 메서드 호출
+            controller.totalsSatistics(statement);
+
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("만족도 설문 통계 조회가 완료되었습니다.");
+            System.out.println("-----------------------------------------------------------");
+
+        }catch (Exception exception){
+          
+        }
+        
 
     }
 
