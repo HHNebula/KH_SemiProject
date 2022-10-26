@@ -7,8 +7,7 @@ public class Run {
 
     public static void main(String[] args) {
 
-        Model m = new Model();
-        m.menu();
+        new Model().menu();
 
     }
 

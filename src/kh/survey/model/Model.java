@@ -138,7 +138,7 @@ public class Model {
 			}
 
 			while (true) {
-				System.out.println("[ 5 ] 호텔을 찾아오시는 길은 편리하셨습니까?");
+				System.out.println("[ 4 ] 호텔을 찾아오시는 길은 편리하셨습니까?");
 				System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
 				System.out.print("번호입력 > ");
 				answer1 = Integer.parseInt(br.readLine());
@@ -152,7 +152,7 @@ public class Model {
 			}
 
 			while (true) {
-				System.out.println("[ 6 ] 호텔의 전체적인 청결도는 만족하셨습니까?");
+				System.out.println("[ 5 ] 호텔의 직원들은 얼마나 친절하였습니까?");
 				System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
 				System.out.print("번호입력 > ");
 				answer2 = Integer.parseInt(br.readLine());
@@ -166,7 +166,7 @@ public class Model {
 			}
 
 			while (true) {
-				System.out.println("[ 7 ] 식당의 음식 만족도는 어떠셨습니까?");
+				System.out.println("[ 6 ] 호텔의 전체적인 청결도는 만족하셨습니까?");
 				System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
 				System.out.print("번호입력 > ");
 				answer3 = Integer.parseInt(br.readLine());
@@ -180,7 +180,7 @@ public class Model {
 			}
 
 			while (true) {
-				System.out.println("[ 8 ] 호텔을 찾아오시는 길은 편리하셨습니까?");
+				System.out.println("[ 7 ] 식당의 음식 만족도는 어떠셨습니까?");
 				System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
 				System.out.print("번호입력 > ");
 				answer4 = Integer.parseInt(br.readLine());
@@ -194,7 +194,7 @@ public class Model {
 			}
 
 			while (true) {
-				System.out.println("[ 9 ] 부대시설 이용은 편리하셨습니까?");
+				System.out.println("[ 8 ] 부대시설 이용은 편리하셨습니까? ");
 				System.out.println("[ 1 : 매우 불만 ] [ 2 : 불만 ] [ 3 : 만족 ] [ 4 : 매우 만족 ]");
 				System.out.print("번호입력 > ");
 				answer5 = Integer.parseInt(br.readLine());
@@ -222,9 +222,7 @@ public class Model {
 		
 	}
 
-
     public void inquery(Statement statement) { // 보경
-
         // 조회기능 구현
         try {
             System.out.println("-----------------------------------------------------------");
@@ -242,7 +240,6 @@ public class Model {
           
         }
         
-
     }
 
 }
