@@ -13,11 +13,11 @@
 - [ERD](./Final/ERD_Final.png)  
 
 ### SRC  
--[Controller](./src/kh/survey/controller/Controller.java)  
--[Model](./src/kh/survey/model/Model.java)  
--[Run](./src/kh/survey/view/Run.java)  
+- [Controller](./src/kh/survey/controller/Controller.java)  
+- [Model](./src/kh/survey/model/Model.java)  
+- [Run](./src/kh/survey/view/Run.java)  
 
 ### SQL
--[Create Table](./SQLs/Create.sql)  
--[Insert](./SQLs/Insert_data.sql)  
+- [Create Table](./SQLs/Create.sql)  
+- [Insert](./SQLs/Insert_data.sql)  
 
