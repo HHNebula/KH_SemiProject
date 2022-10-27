@@ -3,11 +3,12 @@
 
 ### 🔗라이브
 [L4 Hotel Survey_Live](https://www.youtube.com/watch?v=vOxSoL28oqM)  
-<p align="center"><img src="./refers/img/1.gif"></p>  
-- [CheckIN-OUT 유효성검사 동작화면]  
+  
+[CheckIN-OUT 유효성검사 동작화면]  
+<img src="./refers/img/1.gif"> 
 
-<p align="center"><img src="./refers/img/2.gif"></p>  
-- [ID/PW 유효성검사 동작화면]  
+[ID/PW 유효성검사 동작화면]  
+<img src="./refers/img/2.gif"> 
 
 ### CodeArchitecture
 - [CodeArchitecture](./refers/img/3.png)
