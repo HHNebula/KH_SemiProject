@@ -1,8 +1,8 @@
 ## L4 Hotel Survey
 ![Generic badge](https://img.shields.io/badge/java-yellowgreen.svg) ![Generic badge](https://img.shields.io/badge/MySQL-green.svg) ![Generic badge](https://img.shields.io/badge/VisualStudioCode-orange.svg) ![Generic badge](https://img.shields.io/badge/eclipse-blue.svg)
 
-<p align="center"><img src="./refers/img/KakaoTalk_20221027_111503391.gif" height="500px" width="800px"></p>  
-
+<p align="center"><img src="./refers/img/1.gif" height="400px" width="700px"></p>  
+<p align="center"><img src="./refers/img/2.gif" height="400px" width="700px"></p> 
  
 
 ### 🔗라이브
@@ -15,8 +15,7 @@ L4 Hotel Survey 은 L4호텔의 서비스 품질향상을 위해 설문조사 �
 
 ### 🤖 프로젝트 성격 (동기와 기간)
 KH정보교육원 강남 에서 우리에게 처음으로 주어진 Survey_Project!   
-처음 예시로 주어진 Survey는 ID/PW가 존재하지 않는 단순 만족도 조사였으나  
-저희팀은 유효성 검사가 이루어져 중복이 없는 Survey를 통계낼 수 있도록 개발한다면  
+처음 예시로 주어진 Survey는 ID/PW가 존재하지 않는 단순 만족도 조사였으나 저희팀은 유효성 검사가 이루어져 중복이 없는 Survey를 통계낼 수 있도록 개발한다면  
 '악성 설문자의 어뷰징을 방지할 수 있고, 더 정확한 조사가 이루어지지 않을까?' 라는 생각을 가지고 접근했습니다.  
 이런 접근성에 따라 저희팀은 소비자에게 1:1로 설문지를 받아 서비스 향상이 필요한 ITEM을 구상하게 되었으며 여러가지 주제와 아이디어가 나왔으나 투표를 통해 'HOTEL'로 만장일치 되었답니다.  
 여담이지만 처음 화면정의서를 구상하며 이호텔의 불만은 '춥다'로 써놓고 시작하게 되었습니다.  
@@ -57,4 +56,3 @@ KH정보교육원 강남 에서 우리에게 처음으로 주어진 Survey_Proje
 ### SQL
 - [Create Table](./SQLs/Create.sql)  
 - [Insert](./SQLs/Insert_data.sql)  
-
