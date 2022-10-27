@@ -1,8 +1,8 @@
 ## L4 Hotel Survey
 ![Generic badge](https://img.shields.io/badge/java-yellowgreen.svg) ![Generic badge](https://img.shields.io/badge/MySQL-green.svg) ![Generic badge](https://img.shields.io/badge/VisualStudioCode-orange.svg) ![Generic badge](https://img.shields.io/badge/eclipse-blue.svg)
 
-<p align="center"><img src="./refers/img/1.gif" height="400px" width="700px"></p>  
-<p align="center"><img src="./refers/img/2.gif" height="400px" width="700px"></p> 
+<p align="center"><img src="./refers/img/1.gif"></p>  
+<p align="center"><img src="./refers/img/2.gif"></p> 
  
 
 ### 🔗라이브
